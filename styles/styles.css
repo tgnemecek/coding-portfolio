@@ -545,8 +545,8 @@ section.projects > div {
 section.projects > div ul {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(450px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  -ms-grid-columns: (minmax(470px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(470px, 1fr));
   gap: 15px;
 }
 
@@ -736,6 +736,7 @@ section.contact > div form .message {
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin-bottom: 10px;
+  min-height: 200px;
 }
 
 section.contact > div form .submit {
@@ -792,11 +793,11 @@ section.contact > div form .submit button {
   }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 470px) {
   header .social-links i {
     margin-bottom: 0.5rem;
   }
-  section.skills > div ul li {
+  section.skills > div ul li > div {
     padding: 0;
     width: 120px;
     height: 120px;

@@ -40,7 +40,7 @@ section.projects > div {
     @include wrapper;
     ul {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(470px, 1fr));
         gap: 15px;
     }
     .project {
@@ -170,6 +170,7 @@ section.contact > div {
             flex-basis: 100%;
             flex-grow: 1;
             margin-bottom: 10px;
+            min-height: 200px;
         }
         .submit {
             flex-grow: 1;

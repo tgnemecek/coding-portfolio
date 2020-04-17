@@ -38,13 +38,13 @@
     }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 470px) {
     header .social-links i {
         margin-bottom: 0.5rem;
     }
     section.skills > div {
         ul {
-            li {
+            li > div {
                 padding: 0;
                 width: 120px;
                 height: 120px;
