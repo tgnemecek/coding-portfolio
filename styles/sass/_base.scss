@@ -104,6 +104,9 @@ header {
         font-size: 1.6rem;
         margin: 25px;
         z-index: 10;
+        li {
+            position: relative;
+        }
         i {
             margin-bottom: 1rem;
             padding: 5px;

@@ -54,8 +54,13 @@
     h1 {
         font-size: 1.6rem;
     }
-    header p.subtitle {
-        font-size: 1.1rem;
+    header {
+        p.subtitle {
+            font-size: 1.1rem;
+        }
+        .social-links .social-description {
+            font-size: 0.8rem;
+        }
     }
     h2 {
         font-size: 1.4rem;
