@@ -248,7 +248,7 @@ h2 {
 }
 
 section {
-  padding: 10%;
+  padding: 80px 0;
   -webkit-box-shadow: inset 0px -95px 24px -89px rgba(0, 0, 0, 0.1);
           box-shadow: inset 0px -95px 24px -89px rgba(0, 0, 0, 0.1);
 }
@@ -343,6 +343,9 @@ header .site-navigation {
   top: 0;
   right: 0;
   text-align: right;
+  max-width: 1200px;
+  width: 95%;
+  margin: auto;
 }
 
 header .site-navigation .menu-bars {
@@ -404,36 +407,63 @@ footer {
   font-size: 0.7rem;
 }
 
-section.about {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 25px;
-}
-
-section.about .text-container {
+section.about > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 1200px;
+  width: 95%;
   margin: auto;
 }
 
-section.about .text-container p {
+section.about > div .text-container {
+  margin: auto;
+  -ms-flex-preferred-size: 320px;
+      flex-basis: 320px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+section.about > div .text-container p {
   line-height: 1.3rem;
   font-size: 0.8rem;
 }
 
-section.about .img-container {
-  width: 100%;
+section.about > div .img-container {
   height: 500px;
+  -ms-flex-preferred-size: 400px;
+      flex-basis: 400px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-width: 400px;
+  max-height: 400px;
+  margin: 25px 0 0 25px;
+  border: 10px solid white;
+  -webkit-box-shadow: 0px 0px 32px -9px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 32px -9px rgba(0, 0, 0, 0.75);
 }
 
-section.about img {
+section.about > div img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-section.projects ul {
+section.projects > div {
+  max-width: 1200px;
+  width: 95%;
+  margin: auto;
+}
+
+section.projects > div ul {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
@@ -441,7 +471,7 @@ section.projects ul {
   gap: 15px;
 }
 
-section.projects .project {
+section.projects > div .project {
   -webkit-transition: -webkit-box-shadow 0.2s;
   transition: -webkit-box-shadow 0.2s;
   transition: box-shadow 0.2s;
@@ -451,44 +481,44 @@ section.projects .project {
   position: relative;
 }
 
-section.projects .project:hover {
+section.projects > div .project:hover {
   -webkit-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.2);
 }
 
-section.projects .project .project-header {
+section.projects > div .project .project-header {
   height: 55px;
 }
 
-section.projects .project h3 {
+section.projects > div .project h3 {
   font-size: 1.3rem;
   text-align: center;
 }
 
-section.projects .project .category {
+section.projects > div .project .category {
   font-size: 0.9rem;
   margin-bottom: 1rem;
   text-align: center;
 }
 
-section.projects .project img {
+section.projects > div .project img {
   display: block;
   margin: 1rem auto;
 }
 
-section.projects .project p {
+section.projects > div .project p {
   font-size: 0.9rem;
   margin-bottom: 1rem;
   cursor: default;
 }
 
-section.projects .project .tags {
+section.projects > div .project .tags {
   font-style: italic;
   color: #4d4d4d;
   margin-bottom: 70px;
 }
 
-section.projects .project .links {
+section.projects > div .project .links {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100px 100px;
@@ -507,7 +537,13 @@ section.skills {
   background-color: #adc8d4;
 }
 
-section.skills ul {
+section.skills div {
+  max-width: 1200px;
+  width: 95%;
+  margin: auto;
+}
+
+section.skills div ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -521,7 +557,7 @@ section.skills ul {
   cursor: default;
 }
 
-section.skills ul li {
+section.skills div ul li {
   width: 180px;
   text-align: center;
   padding: 5%;
@@ -531,18 +567,24 @@ section.skills ul li {
   transition: box-shadow 0.2s, background-color 0.2s, -webkit-box-shadow 0.2s;
 }
 
-section.skills ul li:hover {
+section.skills div ul li:hover {
   -webkit-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.2);
   background-color: #cedee6;
 }
 
-section.skills ul i {
+section.skills div ul i {
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 
-section.contact > form {
+section.contact > div {
+  max-width: 1200px;
+  width: 95%;
+  margin: auto;
+}
+
+section.contact > div form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -551,11 +593,11 @@ section.contact > form {
   width: 100%;
 }
 
-section.contact > form .subject {
+section.contact > div form .subject {
   margin-right: 10px;
 }
 
-section.contact > form .subject, section.contact > form .email {
+section.contact > div form .subject, section.contact > div form .email {
   -ms-flex-preferred-size: 100px;
       flex-basis: 100px;
   -webkit-box-flex: 1;
@@ -564,7 +606,7 @@ section.contact > form .subject, section.contact > form .email {
   margin-bottom: 10px;
 }
 
-section.contact > form .message {
+section.contact > div form .message {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   -webkit-box-flex: 1;
@@ -573,7 +615,7 @@ section.contact > form .message {
   margin-bottom: 10px;
 }
 
-section.contact > form .submit {
+section.contact > div form .submit {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -581,7 +623,7 @@ section.contact > form .submit {
       flex-basis: 100%;
 }
 
-section.contact > form .submit button {
+section.contact > div form .submit button {
   margin: auto;
   display: block;
   font-size: 1.2rem;

@@ -1,26 +1,38 @@
-section.about {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
+section.about > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include wrapper;
     .text-container {
         margin: auto;
+        // margin-right: 25px;
+        // margin-bottom: 25px;
+        flex-basis: 320px;
+        flex-grow: 1;
         p {
             line-height: 1.3rem;
             font-size: 0.8rem;
         }
     }
     .img-container {
-        width: 100%;
         height: 500px;
+        flex-basis: 400px;
+        flex-grow: 1;
+        max-width: 400px;
+        max-height: 400px;
+        margin: 25px 0 0 25px;
+        border: 10px solid $white;
+        box-shadow: 0px 0px 32px -9px rgba(0,0,0,0.75);
     }
     img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
     }
 }
 
-section.projects {
+section.projects > div {
+    @include wrapper;
     ul {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -75,56 +87,62 @@ section.projects {
 
 section.skills {
     background-color: $primary-color;
-    ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        max-width: 900px;
-        margin: auto;
-        cursor: default;
-        li {
-            // flex-basis: 100px;
-            width: 180px;
-            text-align: center;
-            padding: 5%;
-            transition: box-shadow 0.2s, background-color 0.2s;
-            &:hover {
-                box-shadow: 0px 0px 12px 3px rgba(0,0,0,0.2);
-                background-color: lighten($color: $primary-color, $amount: 10%);
+    div {
+        @include wrapper;
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 900px;
+            margin: auto;
+            cursor: default;
+            li {
+                // flex-basis: 100px;
+                width: 180px;
+                text-align: center;
+                padding: 5%;
+                transition: box-shadow 0.2s, background-color 0.2s;
+                &:hover {
+                    box-shadow: 0px 0px 12px 3px rgba(0,0,0,0.2);
+                    background-color: lighten($color: $primary-color, $amount: 10%);
+                }
             }
-        }
-        i {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
+            i {
+                font-size: 2rem;
+                margin-bottom: 0.5rem;
+            }
         }
     }
 }
 
-section.contact > form {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    .subject {
-        margin-right: 10px;
-    }
-    .subject, .email {
-        flex-basis: 100px;
-        flex-grow: 1;
-        margin-bottom: 10px;
-    }
-    .message {
-        flex-basis: 100%;
-        flex-grow: 1;
-        margin-bottom: 10px;
-    }
-    .submit {
-        flex-grow: 1;
-        flex-basis: 100%;
-        button {
-            margin: auto;
-            display: block;
-            font-size: 1.2rem;
-            padding: 0.4rem 1.6rem;
+section.contact > div {
+    @include wrapper;
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        .subject {
+            margin-right: 10px;
+        }
+        .subject, .email {
+            flex-basis: 100px;
+            flex-grow: 1;
+            margin-bottom: 10px;
+        }
+        .message {
+            flex-basis: 100%;
+            flex-grow: 1;
+            margin-bottom: 10px;
+        }
+        .submit {
+            flex-grow: 1;
+            flex-basis: 100%;
+            button {
+                margin: auto;
+                display: block;
+                font-size: 1.2rem;
+                padding: 0.4rem 1.6rem;
+            }
         }
     }
 }
