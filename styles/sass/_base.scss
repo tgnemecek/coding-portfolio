@@ -104,8 +104,12 @@ header {
         font-size: 1.6rem;
         margin: 25px;
         z-index: 10;
+        pointer-events: none;
         li {
             position: relative;
+        }
+        a {
+            pointer-events: all;
         }
         i {
             margin-bottom: 1rem;

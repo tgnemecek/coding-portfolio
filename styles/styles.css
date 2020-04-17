@@ -351,10 +351,15 @@ header .social-links {
   font-size: 1.6rem;
   margin: 25px;
   z-index: 10;
+  pointer-events: none;
 }
 
 header .social-links li {
   position: relative;
+}
+
+header .social-links a {
+  pointer-events: all;
 }
 
 header .social-links i {
