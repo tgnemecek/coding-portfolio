@@ -317,8 +317,8 @@ header {
           align-items: center;
   background: linear-gradient(-45deg, #adc8d4, white);
   background-size: 400% 400%;
-  -webkit-animation: gradient 10s ease infinite;
-          animation: gradient 10s ease infinite;
+  -webkit-animation: gradient 8s ease infinite;
+          animation: gradient 8s ease infinite;
 }
 
 header .subtitle {
