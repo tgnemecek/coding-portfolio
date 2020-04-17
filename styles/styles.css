@@ -226,15 +226,13 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Manrope", "Arial", "Helvetica", sans-serif;
   color: black;
-}
-
-p, a, button, input, label, textarea, body {
-  font-family: "Manrope", "Arial", "Helvetica", sans-serif;
-  color: black;
-  text-decoration: none;
 }
 
 h1 {
@@ -247,10 +245,24 @@ h2 {
   position: relative;
 }
 
-section {
-  padding: 80px 0;
-  -webkit-box-shadow: inset 0px -95px 24px -89px rgba(0, 0, 0, 0.1);
-          box-shadow: inset 0px -95px 24px -89px rgba(0, 0, 0, 0.1);
+p {
+  line-height: 1.2rem;
+  font-size: 0.9rem;
+}
+
+p, a, button, input, label, textarea, body {
+  font-family: "Manrope", "Arial", "Helvetica", sans-serif;
+  color: black;
+  text-decoration: none;
+}
+
+.m-skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
 }
 
 li {
@@ -289,6 +301,7 @@ button, a.as-button {
   border: none;
   background-color: #e4e4e4;
   text-align: center;
+  position: relative;
   -webkit-transition: color 0.3s, background-color 0.3s;
   transition: color 0.3s, background-color 0.3s;
 }
@@ -298,9 +311,14 @@ button:hover, a.as-button:hover {
   background-color: #adc8d4;
 }
 
+button:disabled, a.as-button.disabled {
+  pointer-events: none;
+  background-color: #a8a8a8;
+}
+
 header {
   position: relative;
-  background-color: #c4daf3;
+  background-color: #f6e2d9;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -328,14 +346,54 @@ header .subtitle {
 
 header .social-links {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   font-size: 1.6rem;
   margin: 25px;
+  z-index: 10;
 }
 
 header .social-links i {
   margin-bottom: 1rem;
+  padding: 5px;
+}
+
+header .social-links .fa-medium {
+  font-size: 1.8rem;
+}
+
+header .social-links .social-description {
+  font-size: 1rem;
+  background-color: black;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 16px;
+  position: relative;
+  display: inline-block;
+  left: -20px;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: left 0.2s, opacity 0.2s;
+  transition: left 0.2s, opacity 0.2s;
+}
+
+header .social-links .social-description:after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 12px solid transparent;
+  border-right-color: black;
+  border-left: 0;
+  margin-top: -12px;
+  margin-left: -12px;
+}
+
+header .social-links a:hover + .social-description {
+  left: 10px;
+  opacity: 1;
 }
 
 header .site-navigation {
@@ -343,14 +401,15 @@ header .site-navigation {
   top: 0;
   right: 0;
   text-align: right;
+  z-index: 10;
   max-width: 1200px;
-  width: 95%;
+  width: 85%;
   margin: auto;
 }
 
 header .site-navigation .menu-bars {
   font-size: 2rem;
-  margin: 25px;
+  padding: 25px;
 }
 
 header .site-navigation ul {
@@ -361,7 +420,7 @@ header .site-navigation ul {
   transition: right 0.5s;
 }
 
-header .site-navigation:hover > ul {
+header .site-navigation .menu-bars:hover + ul, header .site-navigation ul:hover {
   right: 0;
 }
 
@@ -400,24 +459,40 @@ header .site-navigation a {
 
 footer {
   background-color: #4d4d4d;
-  color: #a8a8a8;
   width: 100%;
   text-align: center;
   padding: 15px 0;
+  position: relative;
+}
+
+footer p {
   font-size: 0.7rem;
+  color: #a8a8a8;
+}
+
+footer .version {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 15px;
+  font-style: italic;
+}
+
+section {
+  padding: 80px 0;
+  -webkit-box-shadow: inset 0px -95px 24px -89px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0px -95px 24px -89px rgba(0, 0, 0, 0.1);
 }
 
 section.about > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   max-width: 1200px;
-  width: 95%;
+  width: 85%;
   margin: auto;
 }
 
@@ -432,7 +507,7 @@ section.about > div .text-container {
 
 section.about > div .text-container p {
   line-height: 1.3rem;
-  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
 }
 
 section.about > div .img-container {
@@ -444,7 +519,7 @@ section.about > div .img-container {
           flex-grow: 1;
   max-width: 400px;
   max-height: 400px;
-  margin: 25px 0 0 25px;
+  margin: auto 0 auto 25px;
   border: 10px solid white;
   -webkit-box-shadow: 0px 0px 32px -9px rgba(0, 0, 0, 0.75);
           box-shadow: 0px 0px 32px -9px rgba(0, 0, 0, 0.75);
@@ -459,15 +534,15 @@ section.about > div img {
 
 section.projects > div {
   max-width: 1200px;
-  width: 95%;
+  width: 85%;
   margin: auto;
 }
 
 section.projects > div ul {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  -ms-grid-columns: (minmax(450px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   gap: 15px;
 }
 
@@ -504,10 +579,14 @@ section.projects > div .project .category {
 section.projects > div .project img {
   display: block;
   margin: 1rem auto;
+  width: 100%;
+  max-width: 500px;
+  max-height: 390px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 section.projects > div .project p {
-  font-size: 0.9rem;
   margin-bottom: 1rem;
   cursor: default;
 }
@@ -533,13 +612,39 @@ section.projects > div .project .links {
   width: 100%;
 }
 
+section.projects > div .project .coming-soon {
+  position: absolute;
+  bottom: 95%;
+  left: 40px;
+  width: 100px;
+  padding: 3px;
+  font-size: 0.7rem;
+  background-color: #f6e2d9;
+  z-index: 1;
+}
+
+section.projects > div .project .coming-soon:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 12px solid transparent;
+  border-top-color: #f6e2d9;
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: -6px;
+  margin-bottom: -12px;
+}
+
 section.skills {
   background-color: #adc8d4;
 }
 
 section.skills div {
   max-width: 1200px;
-  width: 95%;
+  width: 85%;
   margin: auto;
 }
 
@@ -552,13 +657,27 @@ section.skills div ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 900px;
   margin: auto;
   cursor: default;
 }
 
-section.skills div ul li {
+section.skills div ul li > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 180px;
+  height: 180px;
   text-align: center;
   padding: 5%;
   -webkit-transition: background-color 0.2s, -webkit-box-shadow 0.2s;
@@ -567,7 +686,7 @@ section.skills div ul li {
   transition: box-shadow 0.2s, background-color 0.2s, -webkit-box-shadow 0.2s;
 }
 
-section.skills div ul li:hover {
+section.skills div ul li > div:hover {
   -webkit-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.2);
   background-color: #cedee6;
@@ -580,7 +699,7 @@ section.skills div ul i {
 
 section.contact > div {
   max-width: 1200px;
-  width: 95%;
+  width: 85%;
   margin: auto;
 }
 
@@ -628,4 +747,63 @@ section.contact > div form .submit button {
   display: block;
   font-size: 1.2rem;
   padding: 0.4rem 1.6rem;
+}
+
+@media (max-width: 950px) {
+  section.about > div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.about > div .img-container {
+    margin: 25px auto 0 auto;
+  }
+}
+
+@media (max-width: 680px) {
+  h1 {
+    font-size: 2rem;
+  }
+  header p.subtitle {
+    font-size: 1.4rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  section.contact > div form .subject {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  section.projects > div ul {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 440px) {
+  section.skills > div ul li {
+    padding: 0;
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 390px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+  header p.subtitle {
+    font-size: 1.1rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
 }

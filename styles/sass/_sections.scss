@@ -1,6 +1,11 @@
+section {
+    padding: 80px 0;
+    box-shadow: inset 0px -95px 24px -89px rgba(0,0,0,0.1);
+}
+
 section.about > div {
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     justify-content: center;
     @include wrapper;
     .text-container {
@@ -9,7 +14,8 @@ section.about > div {
         flex-grow: 1;
         p {
             line-height: 1.3rem;
-            font-size: 0.8rem;
+            // font-size: 0.8rem;
+            margin-bottom: 0.5rem;
         }
     }
     .img-container {
@@ -18,7 +24,8 @@ section.about > div {
         flex-grow: 1;
         max-width: 400px;
         max-height: 400px;
-        margin: 25px 0 0 25px;
+        // margin: 25px 0 0 25px;
+        margin: auto 0 auto 25px;
         border: 10px solid $white;
         box-shadow: 0px 0px 32px -9px rgba(0,0,0,0.75);
     }
@@ -33,7 +40,7 @@ section.projects > div {
     @include wrapper;
     ul {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
         gap: 15px;
     }
     .project {
@@ -59,9 +66,13 @@ section.projects > div {
         img {
             display: block;
             margin: 1rem auto;
+            width: 100%;
+            max-width: 500px;
+            max-height: 390px;
+            object-fit: contain;
         }
         p {
-            font-size: 0.9rem;
+            // font-size: 0.9rem;
             margin-bottom: 1rem;
             cursor: default;
         }
@@ -80,6 +91,30 @@ section.projects > div {
             left: 0;
             width: 100%;
         }
+        .coming-soon {
+            position: absolute;
+            bottom: 95%;
+            left: 40px;
+            width: 100px;
+            padding: 3px;
+            font-size: 0.7rem;
+            background-color: $secondary-color;
+            z-index: 1;
+        }
+        .coming-soon:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border: 12px solid transparent;
+            border-top-color: $secondary-color;
+            border-bottom: 0;
+            border-left: 0;
+            margin-left: -6px;
+            margin-bottom: -12px;
+        }
     }
 }
 
@@ -91,12 +126,16 @@ section.skills {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            align-items: center;
             max-width: 900px;
             margin: auto;
             cursor: default;
-            li {
-                // flex-basis: 100px;
+            li > div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
                 width: 180px;
+                height: 180px;
                 text-align: center;
                 padding: 5%;
                 transition: box-shadow 0.2s, background-color 0.2s;

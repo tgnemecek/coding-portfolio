@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thiago's Coding Portfolio</title>
-    <script src="https://kit.fontawesome.com/1b08e9d32e.js" crossorigin="anonymous"></script>
+    <link href="styles/fontawesome/all.min.css" rel="stylesheet">
+    <link href="styles/fontawesome/brands.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
@@ -13,6 +14,7 @@
     <script src="index.js"></script>
 </head>
 <body>
+    <a href="#about" class="m-skip-link">Skip to main content.</a>
     <header>
         <nav class="social-links">
             <ul>
@@ -20,16 +22,25 @@
                     <a href="https://twitter.com/nemecek_" target="_blank">
                         <i class="fab fa-twitter"></i>
                     </a>
+                    <span class="social-description">
+                        Follow me on Twitter!
+                    </span>
                 </li>
                 <li>
                     <a href="https://github.com/tgnemecek" target="_blank">
                         <i class="fab fa-github"></i>
                     </a>
+                    <span class="social-description">
+                        Check out my repositories!
+                    </span>
                 </li>
                 <li>
                     <a href="https://medium.com/@tgnemecek" target="_blank">
                         <i class="fab fa-medium"></i>
                     </a>
+                    <span class="social-description">
+                        I have a coding blog!
+                    </span>
                 </li>
             </ul>
         </nav>
@@ -54,26 +65,23 @@
                 <div class="text-container" data-aos="fade-right">
                     <h2>About</h2>
                     <p>
-                        Hi! I'm a Brazilian Web Developer living in Toronto.
+                        Hi! I'm a Brazilian Web Developer living in Toronto who is passionate about learning new things. As consequence, I've followed many different paths in life, including working in the Film Industry as Soundtrack Composer, in Video Games as Developer and Sound Designer and, finally, in Technology, as Web Developer.
                     </p>
                     <p>
-                        As an avid learner, I've followed many different paths in life, but my main passions are Technology, Video Games and Music.
+                        I've worked as Front-End and Full-Stack Developer for a couple of professional and personal projects, and I'm always learning new stuff (currently studying Machine Learning), and I frequently apply the knowledge I gather from other areas in coding.
                     </p>
                     <p>
-                        I've worked as Front-End and Full-Stack Developer for a couple of professional and personal projects, and I'm always learning new stuff (currently studying Machine Learning).
-                    </p>
-                    <p>
-                        I love having a problem to solve. The realization of overcoming something you previously thought was impossible is the single best feeling in coding for me, and I always try to mantain myself in that zone where I'm always challenging myself to improve.
+                        In my free time I love playing Video Games and having a great discussion about them with friends (I'm not sure if they like it that much though). During work, I absolutely love having a problem to solve. The realization of overcoming something you previously thought was impossible is the single best feeling in coding for me, and I always try to mantain myself in that zone where I'm always challenging myself to improve.
                     </p>
                 </div>
                 <div class="img-container">
-                    <img src="assets/about-pic.png" alt="Professional photo of Thiago facing forward">
+                    <img src="assets/about-pic.png" alt="Close up photo of a man facing forward">
                 </div>
             </div>
         </section>
-        <section class="projects">
+        <section id="projects" class="projects">
             <div>
-                <h2 id="projects">My Projects</h2>
+                <h2>My Projects</h2>
                 <ul>
                     <li data-aos="fade-up">
                         <div class="project">
@@ -81,12 +89,15 @@
                                 <h3>Locamex System</h3>
                                 <p class="category">Full-Stack</p>
                             </div>
-                            <img src="assets/projects/locamex-system.png" alt="Image of Project">
-                            <p>Business web-app developed for a container rental company called Locamex. The app is a complete workflow rental solution, including contracts, proposals, stock management, product visualizer and user authentication.</p>
+                            <img src="assets/projects/locamex-system.jpg" alt="Screenshot of a web-app showing a calendar filled with tasks.">
+                            <p>Business web-app developed for Locamex: a Brazilian container rental company. The app is a complete workflow rental solution, including contracts, proposals, stock management, product visualizer and user authentication.</p>
                             <p class="tags">#React #Meteor #MongoDB #noSQL #AWS #Heroku</p>
                             <div class="links">
-                                <a href="" class="as-button">Code</a>
-                                <a href="" class="as-button">Live</a>
+                                <a href="https://github.com/tgnemecek/locamex" target="_blank" class="as-button">Code</a>
+                                <a href="" class="as-button disabled">
+                                    Live
+                                    <span class="coming-soon">Coming Soon!</span>
+                                </a>
                             </div>
                         </div>
                     </li>
@@ -96,8 +107,8 @@
                                 <h3>Everyday a New Infection</h3>
                                 <p class="category">Game</p>
                             </div>
-                            <img src="assets/projects/locamex-system.png" alt="Image of Project">
-                            <p>Build your immune system to fight infections! A Tower Defense game built using jQuery for all visual logic and the Web Audio API for full audio control.</p>
+                            <img src="assets/projects/everyday-a-new-infection.jpg" alt="Screenshot of a web-game main menu showing post-its glued on top of x-rays of a human thorax.">
+                            <p>Build your immune system to fight infections! A Tower Defense game built using jQuery for all visual logic, JavaScript Class Inheritance for Game Actors and the Web Audio API for full audio control.</p>
                             <p class="tags">#jQuery #WebAudioAPI</p>
                             <div class="links">
                                 <a href="https://github.com/tgnemecek/everyday-a-new-infection" target="_blank" class="as-button">Code</a>
@@ -111,27 +122,30 @@
                                 <h3>Locamex Website</h3>
                                 <p class="category">Website</p>
                             </div>
-                            <img src="assets/projects/locamex-system.png" alt="Image of Project">
-                            <p>Business Webpage developed for rental company Locamex. Made in Wordpress. Proposal form made in PHP.</p>
+                            <img src="assets/projects/locamex-website.jpg" alt="Screenshot of the home page of a website, displaying a logo of a yellow and gray shipping container with the word Locamex stamped on its side.">
+                            <p>Business Website developed for Locamex. Made in Wordpress. Proposal form made in HTML and PHP.</p>
                             <p class="tags">#Wordpress #PHP</p>
                             <div class="links">
-                                <a href="" class="as-button">Code</a>
-                                <a href="" class="as-button">Live</a>
+                                <a href="" class="as-button disabled">
+                                    Code
+                                    <span class="coming-soon">Coming Soon!</span>
+                                </a>
+                                <a href="http://www.locamex.com.br" target="_blank" class="as-button">Live</a>
                             </div>
                         </div>
                     </li>
                     <li data-aos="fade-up">
                         <div class="project">
                             <div class="project-header">
-                                <h3>Design</h3>
+                                <h3>Creative</h3>
                                 <p class="category">Simple Page</p>
                             </div>
-                            <img src="assets/projects/locamex-system.png" alt="Image of Project">
+                            <img src="assets/projects/creative.jpg" alt="Clean office with white desk with plants on top. Round chair in the foreground, facing the desk.">
                             <p>Simple page developed using plain HTML and SASS. Extensive use of semantic HTML elements and accessibility best practices.</p>
                             <p class="tags">#HTML5 #SASS #CSS #Accessibility</p>
                             <div class="links">
-                                <a href="" class="as-button">Code</a>
-                                <a href="" class="as-button">Live</a>
+                                <a href="https://github.com/tgnemecek/creative" target="_blank" class="as-button">Code</a>
+                                <a href="https://tgnemecek.github.io/creative" target="_blank" class="as-button">Live</a>
                             </div>
                         </div>
                     </li>
@@ -158,49 +172,71 @@
             <div>
                 <h2>My Toolbox</h2>
                 <ul>
-                    <li>
-                        <i class="fab fa-html5"></i>
-                        <p>HTML5</p>
+                    <li data-aos="zoom-in">
+                        <div>
+                            <i class="fab fa-html5"></i>
+                            <p>HTML5</p>
+                        </div>
                     </li>
-                    <li>
-                        <i class="fab fa-sass"></i>
-                        <p>SASS</p>
+                    <li data-aos="zoom-in" data-aos-delay="100">
+                        <div>
+                            <i class="fab fa-sass"></i>
+                            <p>SASS</p>
+                        </div>
                     </li>
-                    <li>
-                        <i class="fab fa-react"></i>
-                        <p>React</p>
+                    <li data-aos="zoom-in" data-aos-delay="200">
+                        <div>
+                            <i class="fab fa-react"></i>
+                            <p>React</p>
+                        </div>
                     </li>
-                    <li>
-                        <i class="fab fa-js"></i>
-                        <p>Advanced JavaScript</p>
+                    <li data-aos="zoom-in" data-aos-delay="300">
+                        <div>
+                            <i class="fab fa-js"></i>
+                            <p>Advanced<br>JavaScript</p>
+                        </div>
                     </li>
-                    <li>
-                        <i class="fab fa-git"></i>
-                        <p>Git</p>
+                    <li data-aos="zoom-in" data-aos-delay="400">
+                        <div>
+                            <i class="fab fa-git"></i>
+                            <p>Git</p>
+                        </div>
                     </li>
-                    <li>
-                        <i class="fab fa-node"></i>
-                        <p>Node</p>
+                    <li data-aos="zoom-in" data-aos-delay="500">
+                        <div>
+                            <i class="fab fa-node"></i>
+                            <p>Node</p>
+                        </div>
                     </li>
-                    <li>
-                        <i class="fas fa-database"></i>
-                        <p>SQL</p>
+                    <li data-aos="zoom-in" data-aos-delay="600">
+                        <div>
+                            <i class="fas fa-database"></i>
+                            <p>SQL</p>
+                        </div>
                     </li>
-                    <li>
-                        <i class="fas fa-server"></i>
-                        <p>MongoDB</p>
+                    <li data-aos="zoom-in" data-aos-delay="700">
+                        <div>
+                            <i class="fas fa-server"></i>
+                            <p>MongoDB</p>
+                        </div>
                     </li>
-                    <li>
-                        <i class="fas fa-meteor"></i>
-                        <p>Meteor</p>
+                    <li data-aos="zoom-in" data-aos-delay="800">
+                        <div>
+                            <i class="fas fa-meteor"></i>
+                            <p>Meteor</p>
+                        </div>
                     </li>
-                    <li>
-                        <i class="fab fa-aws"></i>
-                        <p>AWS</p>
+                    <li data-aos="zoom-in" data-aos-delay="900">
+                        <div>
+                            <i class="fab fa-aws"></i>
+                            <p>AWS</p>
+                        </div>
                     </li>
-                    <!-- <li>
-                        <i class="fab fa-unity"></i>
-                        <p>C#</p>
+                    <!-- <li data-aos="zoom-in" data-aos-delay="1000">
+                        <div>
+                            <i class="fab fa-unity"></i>
+                            <p>C#</p>
+                        </div>
                     </li> -->
                 </ul>
             </div>
@@ -223,7 +259,8 @@
         </section>
     </main>
     <footer>
-        Copyright Thiago Nemecek. All Rights Reserved
+        <p>Copyright Thiago Nemecek. All Rights Reserved</p>
+        <p id="version" class="version"></p>
     </footer>
 </body>
 </html>

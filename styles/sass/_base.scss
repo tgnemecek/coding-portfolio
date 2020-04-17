@@ -8,15 +8,13 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: $header-font;
     color: $font-primary-color;
-}
-
-p, a, button, input, label, textarea, body {
-    font-family: $paragraph-font;
-    color: $font-primary-color;
-    text-decoration: none;
 }
 
 h1 {
@@ -29,9 +27,24 @@ h2 {
     position: relative;
 }
 
-section {
-    padding: 80px 0;
-    box-shadow: inset 0px -95px 24px -89px rgba(0,0,0,0.1);
+p {
+    line-height: 1.2rem;
+    font-size: 0.9rem;
+}
+
+p, a, button, input, label, textarea, body {
+    font-family: $paragraph-font;
+    color: $font-primary-color;
+    text-decoration: none;
+}
+
+.m-skip-link {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 999;
+    background: white;
+    color: black;
 }
 
 li {
@@ -55,11 +68,17 @@ button, a.as-button {
     border: none;
     background-color: $light-gray;
     text-align: center;
+    position: relative;
     transition: color 0.3s, background-color 0.3s;
     &:hover {
         color: white;
         background-color: $primary-color;
     }
+}
+
+button:disabled, a.as-button.disabled {
+    pointer-events: none;
+    background-color: $gray;
 }
 
 
@@ -80,12 +99,47 @@ header {
     }
     .social-links {
         position: fixed;
-        top: 0;
+        bottom: 0;
         left: 0;
         font-size: 1.6rem;
         margin: 25px;
+        z-index: 10;
         i {
             margin-bottom: 1rem;
+            padding: 5px;
+        }
+        .fa-medium {
+            font-size: 1.8rem;
+        }
+        .social-description {
+            font-size: 1rem;
+            background-color: black;
+            color: $white;
+            padding: 6px 10px;
+            border-radius: 16px;
+            position: relative;
+            display: inline-block;
+            left: -20px;
+            opacity: 0;
+            pointer-events: none;
+            transition: left 0.2s, opacity 0.2s;
+        }
+        .social-description:after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            width: 0;
+            height: 0;
+            border: 12px solid transparent;
+            border-right-color: black;
+            border-left: 0;
+            margin-top: -12px;
+            margin-left: -12px;
+        }
+        a:hover + .social-description {
+            left: 10px;
+            opacity: 1;
         }
     }
     .site-navigation {
@@ -93,10 +147,11 @@ header {
         top: 0;
         right: 0;
         text-align: right;
+        z-index: 10;
         @include wrapper;
         .menu-bars {
             font-size: 2rem;
-            margin: 25px;
+            padding: 25px;
         }
         ul {
             position: absolute;
@@ -104,7 +159,7 @@ header {
             right: -150px;
             transition: right 0.5s;
         }
-        &:hover > ul {
+        .menu-bars:hover + ul, ul:hover {
             right: 0;
         }
         li {
@@ -129,15 +184,21 @@ header {
 	}
 }
 
-// @media (min-width: 1000px) {
-// }
-
-
 footer {
     background-color: $dark-gray;
-    color: $gray;
     width: 100%;
     text-align: center;
     padding: 15px 0;
-    font-size: 0.7rem;
+    position: relative;
+    p {
+        font-size: 0.7rem;
+        color: $gray;
+    }
+    .version {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 15px;
+        font-style: italic;
+    }
 }

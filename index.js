@@ -1,4 +1,9 @@
+let version = '1.0.0';
+
 window.onload = function() {
+    let versionEl = document.getElementById('version');
+    versionEl.innerHTML = "v" + version;
+
     let options = {
         strings: [
             'Web',

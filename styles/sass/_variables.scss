@@ -1,8 +1,8 @@
 $header-font: 'Manrope', 'Arial', 'Helvetica', sans-serif;
 $paragraph-font: 'Manrope', 'Arial', 'Helvetica', sans-serif;
 
-$primary-color: rgb(173, 200, 212);
-$secondary-color: #c4daf3;
+$primary-color: #adc8d4;
+$secondary-color: #f6e2d9;
 
 $white: white;
 $gray: #a8a8a8;
@@ -14,6 +14,6 @@ $font-primary-color: black;
 
 @mixin wrapper {
     max-width: 1200px;
-    width: 95%;
+    width: 85%;
     margin: auto;
 }

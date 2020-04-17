@@ -1,0 +1,63 @@
+@media (max-width: 950px) {
+    section.about > div {
+        flex-direction: column;
+        .img-container {
+            margin: 25px auto 0 auto;
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    h1 {
+        font-size: 2rem;
+    }
+    header p.subtitle {
+        font-size: 1.4rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    p {
+        font-size: 0.8rem;
+    }
+    section.contact > div {
+        form {
+            .subject {
+                flex-basis: 100%;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    section.projects > div {
+        ul {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    section.skills > div {
+        ul {
+            li {
+                padding: 0;
+                width: 120px;
+                height: 120px;
+            }
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+    header p.subtitle {
+        font-size: 1.1rem;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+}
