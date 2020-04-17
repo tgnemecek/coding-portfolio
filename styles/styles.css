@@ -807,6 +807,12 @@ section.contact > div form .submit button {
   header p.subtitle {
     font-size: 1.1rem;
   }
+  header .social-links {
+    font-size: 1.3rem;
+  }
+  header .social-links .fa-medium {
+    font-size: 1.5rem;
+  }
   header .social-links .social-description {
     font-size: 0.8rem;
   }

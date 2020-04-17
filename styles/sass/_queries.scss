@@ -58,8 +58,14 @@
         p.subtitle {
             font-size: 1.1rem;
         }
-        .social-links .social-description {
-            font-size: 0.8rem;
+        .social-links {
+            font-size: 1.3rem;
+            .fa-medium {
+                font-size: 1.5rem;
+            }
+            .social-description {
+                font-size: 0.8rem;
+            }
         }
     }
     h2 {
