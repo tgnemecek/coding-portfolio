@@ -793,6 +793,9 @@ section.contact > div form .submit button {
 }
 
 @media (max-width: 440px) {
+  header .social-links i {
+    margin-bottom: 0.5rem;
+  }
   section.skills > div ul li {
     padding: 0;
     width: 120px;
@@ -818,5 +821,14 @@ section.contact > div form .submit button {
   }
   h2 {
     font-size: 1.4rem;
+  }
+  section.skills > div ul li {
+    padding: 0;
+    width: auto;
+    height: auto;
+  }
+  footer p {
+    text-align: left;
+    margin-left: 15px;
   }
 }
