@@ -5,6 +5,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 html {
     font-size: 125%;
+    scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -18,10 +19,6 @@ p, a, button, input, label, textarea, body {
     text-decoration: none;
 }
 
-a:visited {
-    color: $font-primary-color;
-}
-
 h1 {
     font-size: 3.2rem;
 }
@@ -30,16 +27,41 @@ h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
     position: relative;
-    // &:after {
-    //     content: '';
-    //     width: 25px;
-    //     height: 3px;
-    //     background-color: black;
-    //     position: absolute;
-    //     bottom: -5px;
-    //     left: 0;
-    // }
 }
+
+section {
+    padding: 10%;
+    box-shadow: inset 0px -95px 24px -89px rgba(0,0,0,0.1);
+}
+
+li {
+    list-style: none;
+}
+
+input, textarea, button, a.as-button {
+    padding: 0.5rem;
+}
+
+input::placeholder, textarea::placeholder {
+    color: $gray;
+    font-style: italic;
+}
+
+a:visited {
+    color: $font-primary-color;
+}
+
+button, a.as-button {
+    border: none;
+    background-color: $light-gray;
+    text-align: center;
+    transition: color 0.3s, background-color 0.3s;
+    &:hover {
+        color: white;
+        background-color: $primary-color;
+    }
+}
+
 
 header {
     position: relative;
@@ -49,19 +71,31 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(-45deg, $primary-color, $white);
+	background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
     .subtitle {
         margin-top: 1rem;
         font-size: 1.5rem;
     }
-    nav {
+    .social-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        font-size: 1.6rem;
+        margin: 25px;
+        i {
+            margin-bottom: 1rem;
+        }
+    }
+    .site-navigation {
         position: fixed;
         top: 0;
         right: 0;
         text-align: right;
-        margin: 25px;
         .menu-bars {
             font-size: 2rem;
-            line-height: 4rem;
+            margin: 25px;
         }
         ul {
             position: absolute;
@@ -73,7 +107,7 @@ header {
             right: 0;
         }
         li {
-            padding: 5px 0;
+            padding: 5px 25px 5px 0;
         }
         a {
             font-size: 1.4rem;
@@ -82,40 +116,25 @@ header {
     }
 }
 
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 // @media (min-width: 1000px) {
 // }
 
-section {
-    padding: 10%;
-    box-shadow: inset 0px -95px 24px -89px rgba(0,0,0,0.1);
-}
-
-li {
-    list-style: none;
-}
-
-input, textarea, button {
-    padding: 0.5rem;
-}
-
-input::placeholder, textarea::placeholder {
-    color: $gray;
-    font-style: italic;
-}
-
-button {
-    border: none;
-    background-color: $light-gray;
-    transition: color 0.3s, background-color 0.3s;
-    &:hover {
-        color: white;
-        background-color: $primary-color;
-    }
-}
 
 footer {
-    background-color: $gray;
-    color: $dark-gray;
+    background-color: $dark-gray;
+    color: $gray;
     width: 100%;
     text-align: center;
     padding: 15px 0;

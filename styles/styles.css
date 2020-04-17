@@ -223,21 +223,18 @@ textarea {
 
 html {
   font-size: 125%;
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Arial", "Helvetica", sans-serif;
+  font-family: "Manrope", "Arial", "Helvetica", sans-serif;
   color: black;
 }
 
 p, a, button, input, label, textarea, body {
-  font-family: "Arial", "Helvetica", sans-serif;
+  font-family: "Manrope", "Arial", "Helvetica", sans-serif;
   color: black;
   text-decoration: none;
-}
-
-a:visited {
-  color: black;
 }
 
 h1 {
@@ -250,64 +247,6 @@ h2 {
   position: relative;
 }
 
-header {
-  position: relative;
-  background-color: cyan;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-header .subtitle {
-  margin-top: 1rem;
-  font-size: 1.5rem;
-}
-
-header nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  text-align: right;
-  margin: 25px;
-}
-
-header nav .menu-bars {
-  font-size: 2rem;
-  line-height: 4rem;
-}
-
-header nav ul {
-  position: absolute;
-  top: 75px;
-  right: -150px;
-  -webkit-transition: right 0.5s;
-  transition: right 0.5s;
-}
-
-header nav:hover > ul {
-  right: 0;
-}
-
-header nav li {
-  padding: 5px 0;
-}
-
-header nav a {
-  font-size: 1.4rem;
-  line-height: 2rem;
-}
-
 section {
   padding: 10%;
   -webkit-box-shadow: inset 0px -95px 24px -89px rgba(0, 0, 0, 0.1);
@@ -318,7 +257,7 @@ li {
   list-style: none;
 }
 
-input, textarea, button {
+input, textarea, button, a.as-button {
   padding: 0.5rem;
 }
 
@@ -342,21 +281,123 @@ input::placeholder, textarea::placeholder {
   font-style: italic;
 }
 
-button {
+a:visited {
+  color: black;
+}
+
+button, a.as-button {
   border: none;
   background-color: #e4e4e4;
+  text-align: center;
   -webkit-transition: color 0.3s, background-color 0.3s;
   transition: color 0.3s, background-color 0.3s;
 }
 
-button:hover {
+button:hover, a.as-button:hover {
   color: white;
-  background-color: blue;
+  background-color: #adc8d4;
+}
+
+header {
+  position: relative;
+  background-color: #c4daf3;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: linear-gradient(-45deg, #adc8d4, white);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 10s ease infinite;
+          animation: gradient 10s ease infinite;
+}
+
+header .subtitle {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+header .social-links {
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 1.6rem;
+  margin: 25px;
+}
+
+header .social-links i {
+  margin-bottom: 1rem;
+}
+
+header .site-navigation {
+  position: fixed;
+  top: 0;
+  right: 0;
+  text-align: right;
+}
+
+header .site-navigation .menu-bars {
+  font-size: 2rem;
+  margin: 25px;
+}
+
+header .site-navigation ul {
+  position: absolute;
+  top: 75px;
+  right: -150px;
+  -webkit-transition: right 0.5s;
+  transition: right 0.5s;
+}
+
+header .site-navigation:hover > ul {
+  right: 0;
+}
+
+header .site-navigation li {
+  padding: 5px 25px 5px 0;
+}
+
+header .site-navigation a {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 footer {
-  background-color: #a8a8a8;
-  color: #4d4d4d;
+  background-color: #4d4d4d;
+  color: #a8a8a8;
   width: 100%;
   text-align: center;
   padding: 15px 0;
@@ -366,8 +407,9 @@ footer {
 section.about {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
 }
 
 section.about .text-container {
@@ -376,7 +418,7 @@ section.about .text-container {
 
 section.about .text-container p {
   line-height: 1.3rem;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 section.about .img-container {
@@ -394,46 +436,59 @@ section.about img {
 section.projects ul {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 15px;
 }
 
-section.projects li {
+section.projects .project {
   -webkit-transition: -webkit-box-shadow 0.2s;
   transition: -webkit-box-shadow 0.2s;
   transition: box-shadow 0.2s;
   transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
   padding: 15px;
+  height: 100%;
+  position: relative;
 }
 
-section.projects li:hover {
+section.projects .project:hover {
   -webkit-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.2);
 }
 
-section.projects li h3 {
+section.projects .project .project-header {
+  height: 55px;
+}
+
+section.projects .project h3 {
   font-size: 1.3rem;
+  text-align: center;
+}
+
+section.projects .project .category {
+  font-size: 0.9rem;
   margin-bottom: 1rem;
   text-align: center;
 }
 
-section.projects li img {
+section.projects .project img {
   display: block;
   margin: 1rem auto;
 }
 
-section.projects li p {
+section.projects .project p {
   font-size: 0.9rem;
   margin-bottom: 1rem;
+  cursor: default;
 }
 
-section.projects li .tags {
+section.projects .project .tags {
   font-style: italic;
   color: #4d4d4d;
+  margin-bottom: 70px;
 }
 
-section.projects li .buttons {
+section.projects .project .links {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100px 100px;
@@ -442,6 +497,14 @@ section.projects li .buttons {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 15px;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  width: 100%;
+}
+
+section.skills {
+  background-color: #adc8d4;
 }
 
 section.skills ul {
@@ -455,22 +518,23 @@ section.skills ul {
           justify-content: center;
   max-width: 900px;
   margin: auto;
+  cursor: default;
 }
 
 section.skills ul li {
-  -ms-flex-preferred-size: 100px;
-      flex-basis: 100px;
+  width: 180px;
   text-align: center;
   padding: 5%;
-  -webkit-transition: -webkit-box-shadow 0.2s;
-  transition: -webkit-box-shadow 0.2s;
-  transition: box-shadow 0.2s;
-  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  -webkit-transition: background-color 0.2s, -webkit-box-shadow 0.2s;
+  transition: background-color 0.2s, -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s, background-color 0.2s;
+  transition: box-shadow 0.2s, background-color 0.2s, -webkit-box-shadow 0.2s;
 }
 
 section.skills ul li:hover {
   -webkit-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.2);
+  background-color: #cedee6;
 }
 
 section.skills ul i {
@@ -520,4 +584,6 @@ section.contact > form .submit {
 section.contact > form .submit button {
   margin: auto;
   display: block;
+  font-size: 1.2rem;
+  padding: 0.4rem 1.6rem;
 }
