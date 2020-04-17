@@ -30,15 +30,15 @@ h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
     position: relative;
-    &:after {
-        content: '';
-        width: 25px;
-        height: 3px;
-        background-color: black;
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-    }
+    // &:after {
+    //     content: '';
+    //     width: 25px;
+    //     height: 3px;
+    //     background-color: black;
+    //     position: absolute;
+    //     bottom: -5px;
+    //     left: 0;
+    // }
 }
 
 header {
