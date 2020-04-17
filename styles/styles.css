@@ -1,0 +1,519 @@
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:after, blockquote:before, q:after, q:before {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-search-results-button, input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type=search] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+audio, canvas, video {
+  display: inline-block;
+  max-width: 100%;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+figure {
+  margin: 0;
+}
+
+form {
+  margin: 0;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+}
+
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+input[type=checkbox], input[type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button, html, input, select, textarea {
+  color: #222;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.chromeframe {
+  margin: .2em 0;
+  background: #ccc;
+  color: #000;
+  padding: .2em 0;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: '';
+  clear: both;
+  height: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0);
+  overflow: hidden;
+}
+
+html {
+  font-size: 125%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Arial", "Helvetica", sans-serif;
+  color: black;
+}
+
+p, a, button, input, label, textarea, body {
+  font-family: "Arial", "Helvetica", sans-serif;
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+h2:after {
+  content: '';
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+header {
+  position: relative;
+  background-color: cyan;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .subtitle {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+header nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  text-align: right;
+  margin: 25px;
+}
+
+header nav .menu-bars {
+  font-size: 2rem;
+  line-height: 4rem;
+}
+
+header nav ul {
+  position: absolute;
+  top: 75px;
+  right: -150px;
+  -webkit-transition: right 0.5s;
+  transition: right 0.5s;
+}
+
+header nav:hover > ul {
+  right: 0;
+}
+
+header nav li {
+  padding: 5px 0;
+}
+
+header nav a {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+section {
+  padding: 10%;
+  -webkit-box-shadow: inset 0px -95px 24px -89px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0px -95px 24px -89px rgba(0, 0, 0, 0.1);
+}
+
+li {
+  list-style: none;
+}
+
+input, textarea, button {
+  padding: 0.5rem;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #a8a8a8;
+  font-style: italic;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #a8a8a8;
+  font-style: italic;
+}
+
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  color: #a8a8a8;
+  font-style: italic;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #a8a8a8;
+  font-style: italic;
+}
+
+button {
+  border: none;
+  background-color: #e4e4e4;
+  -webkit-transition: color 0.3s, background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+button:hover {
+  color: white;
+  background-color: blue;
+}
+
+footer {
+  background-color: #a8a8a8;
+  color: #4d4d4d;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.7rem;
+}
+
+section.about {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+section.about .text-container {
+  margin: auto;
+}
+
+section.about .img-container {
+  width: 100%;
+  height: 500px;
+}
+
+section.about img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+section.projects ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+section.projects li {
+  -webkit-transition: -webkit-box-shadow 0.2s;
+  transition: -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  padding: 15px;
+}
+
+section.projects li:hover {
+  -webkit-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.2);
+}
+
+section.projects li h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+section.projects li img {
+  display: block;
+  margin: 1rem auto;
+}
+
+section.projects li p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+section.projects li .tags {
+  font-style: italic;
+  color: #4d4d4d;
+}
+
+section.projects li .buttons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 100px;
+      grid-template-columns: 100px 100px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15px;
+}
+
+section.skills ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+section.skills ul li {
+  -ms-flex-preferred-size: 100px;
+      flex-basis: 100px;
+  text-align: center;
+  margin: 5%;
+}
+
+section.skills ul i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+section.contact > form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+section.contact > form .subject {
+  margin-right: 10px;
+}
+
+section.contact > form .subject, section.contact > form .email {
+  -ms-flex-preferred-size: 100px;
+      flex-basis: 100px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-bottom: 10px;
+}
+
+section.contact > form .message {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-bottom: 10px;
+}
+
+section.contact > form .submit {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+section.contact > form .submit button {
+  margin: auto;
+  display: block;
+}
