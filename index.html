@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Thiago Nemecek's Web Development portfolio.">
     <title>Thiago's Coding Portfolio</title>
     <link href="styles/fontawesome/all.min.css" rel="stylesheet">
     <link href="styles/fontawesome/brands.min.css" rel="stylesheet">
@@ -19,24 +20,27 @@
         <nav class="social-links">
             <ul>
                 <li>
-                    <a href="https://twitter.com/nemecek_" target="_blank">
+                    <a href="https://twitter.com/nemecek_" target="_blank" rel="noopener">
                         <i class="fab fa-twitter"></i>
+                        <span class="visually-hidden">Go to my Twitter</span>
                     </a>
                     <span class="social-description">
                         Follow me on Twitter!
                     </span>
                 </li>
                 <li>
-                    <a href="https://github.com/tgnemecek" target="_blank">
+                    <a href="https://github.com/tgnemecek" target="_blank" rel="noopener">
                         <i class="fab fa-github"></i>
+                        <span class="visually-hidden">Go to my GitHub Page</span>
                     </a>
                     <span class="social-description">
                         Check out my repositories!
                     </span>
                 </li>
                 <li>
-                    <a href="https://medium.com/@tgnemecek" target="_blank">
+                    <a href="https://medium.com/@tgnemecek" target="_blank" rel="noopener">
                         <i class="fab fa-medium"></i>
+                        <span class="visually-hidden">Go to my Medium Page</span>
                     </a>
                     <span class="social-description">
                         Check out my coding blog!
@@ -71,11 +75,14 @@
                         I've worked as Front-End and Full-Stack Developer for a couple of professional and personal projects, and I'm always learning new stuff (currently studying Machine Learning), and I frequently apply the knowledge I gather from other areas in coding.
                     </p>
                     <p>
-                        In my free time I love playing Video Games and having a great discussion about them with friends (I'm not sure if they like it that much though). During work, I absolutely love having a problem to solve. The realization of overcoming something you previously thought was impossible is the single best feeling in coding for me, and I always try to mantain myself in that zone where I'm always challenging myself to improve.
+                        In my free time I love playing Video Games and having a great discussion about them with friends (I'm not sure if they like it that much though). During work, I absolutely love having a problem to solve. The realization of overcoming something you previously thought was impossible is the single best feeling in coding for me, and I always try to mantain myself in that zone where I'm constantly challenging myself to improve.
                     </p>
                 </div>
                 <div class="img-container">
-                    <img src="assets/about-pic.png" alt="Close up photo of a man facing forward">
+                    <picture>
+                        <source type="image/webp" srcset="assets/about-pic.webp">
+                        <img src="assets/about-pic.png" alt="Close up photo of a man facing forward">
+                    </picture>
                 </div>
             </div>
         </section>
@@ -89,11 +96,14 @@
                                 <h3>Locamex System</h3>
                                 <p class="category">Full-Stack</p>
                             </div>
-                            <img src="assets/projects/locamex-system.jpg" alt="Screenshot of a web-app showing a calendar filled with tasks.">
+                            <picture>
+                                <source type="image/webp" srcset="assets/projects/locamex-system.webp">
+                                <img src="assets/projects/locamex-system.jpg" alt="Screenshot of a web-app showing a calendar filled with tasks.">
+                            </picture>
                             <p>Business web-app developed for Locamex: a Brazilian container rental company. The app is a complete workflow solution for rentals, including contracts, proposals, stock management, product visualizer and user authentication.</p>
                             <p class="tags">#React #Meteor #MongoDB #noSQL #AWS #Heroku</p>
                             <div class="links">
-                                <a href="https://github.com/tgnemecek/locamex" target="_blank" class="as-button">Code</a>
+                                <a href="https://github.com/tgnemecek/locamex" target="_blank" rel="noopener" class="as-button">Code</a>
                                 <a href="" class="as-button disabled">
                                     Live
                                     <span class="coming-soon">Coming Soon!</span>
@@ -107,12 +117,15 @@
                                 <h3>Everyday a New Infection</h3>
                                 <p class="category">Game</p>
                             </div>
-                            <img src="assets/projects/everyday-a-new-infection.jpg" alt="Screenshot of a web-game main menu showing post-its glued on top of x-rays of a human thorax.">
+                            <picture>
+                                <source type="image/webp" srcset="assets/projects/everyday-a-new-infection.webp">
+                                <img src="assets/projects/everyday-a-new-infection.jpg" alt="Screenshot of a web-game main menu showing post-its glued on top of x-rays of a human thorax.">
+                            </picture>
                             <p>Build your immune system to fight infections! A Tower Defense game built using jQuery for all visual logic, JavaScript Class Inheritance for Game Actors and the Web Audio API for full audio control.</p>
                             <p class="tags">#jQuery #WebAudioAPI</p>
                             <div class="links">
-                                <a href="https://github.com/tgnemecek/everyday-a-new-infection" target="_blank" class="as-button">Code</a>
-                                <a href="https://tgnemecek.github.io/everyday-a-new-infection/" target="_blank" class="as-button">Live</a>
+                                <a href="https://github.com/tgnemecek/everyday-a-new-infection" target="_blank" rel="noopener" class="as-button">Code</a>
+                                <a href="https://tgnemecek.github.io/everyday-a-new-infection/" target="_blank" rel="noopener" class="as-button">Live</a>
                             </div>
                         </div>
                     </li>
@@ -122,7 +135,10 @@
                                 <h3>Locamex Website</h3>
                                 <p class="category">Website</p>
                             </div>
-                            <img src="assets/projects/locamex-website.jpg" alt="Screenshot of the home page of a website, displaying a logo of a yellow and gray shipping container with the word Locamex stamped on its side.">
+                            <picture>
+                                <source type="image/webp" srcset="assets/projects/locamex-website.webp">
+                                <img src="assets/projects/locamex-website.jpg" alt="Screenshot of the home page of a website, displaying a logo of a yellow and gray shipping container with the word Locamex stamped on its side.">
+                            </picture>
                             <p>Business Website developed for Locamex. Made in Wordpress. Proposal form made in HTML and PHP.</p>
                             <p class="tags">#Wordpress #PHP</p>
                             <div class="links">
@@ -130,7 +146,7 @@
                                     Code
                                     <span class="coming-soon">Coming Soon!</span>
                                 </a>
-                                <a href="http://www.locamex.com.br" target="_blank" class="as-button">Live</a>
+                                <a href="http://www.locamex.com.br" target="_blank" rel="noopener" class="as-button">Live</a>
                             </div>
                         </div>
                     </li>
@@ -140,31 +156,18 @@
                                 <h3>Creative</h3>
                                 <p class="category">Simple Page</p>
                             </div>
-                            <img src="assets/projects/creative.jpg" alt="Clean office with white desk with plants on top. Round chair in the foreground, facing the desk.">
+                            <picture>
+                                <source type="image/webp" srcset="assets/projects/creative.webp">
+                                <img src="assets/projects/creative.jpg" alt="Clean office with white desk with plants on top. Round chair in the foreground, facing the desk.">
+                            </picture>
                             <p>Simple page developed using plain HTML and SASS. Extensive use of semantic HTML elements and accessibility best practices.</p>
                             <p class="tags">#HTML5 #SASS #CSS #Accessibility</p>
                             <div class="links">
-                                <a href="https://github.com/tgnemecek/creative" target="_blank" class="as-button">Code</a>
-                                <a href="https://tgnemecek.github.io/creative" target="_blank" class="as-button">Live</a>
+                                <a href="https://github.com/tgnemecek/creative" target="_blank" rel="noopener" class="as-button">Code</a>
+                                <a href="https://tgnemecek.github.io/creative" target="_blank" rel="noopener" class="as-button">Live</a>
                             </div>
                         </div>
                     </li>
-                    <!-- <li data-aos="fade-up">
-                        <div class="project">
-                            <div class="project-header">
-                                <h3>SOS: Switch Off Stress</h3>
-                                <p class="category">Mobile Game/App</p>
-                            </div>
-                            <img src="assets/projects/locamex-system.png" alt="Image of Project">
-                            <p>
-                                Mobile App made in partnership with Sharon Seivert, creator of stress-reducing techniques, as a stress-reducing gamified application. Developed in Unity Engine (C#) and deployed for iOS and Android.</p>
-                            <p class="tags">#CSharp #Unity #iOS #Android</p>
-                            <div class="links">
-                                <a href="" class="as-button">Code</a>
-                                <a href="" class="as-button">Live</a>
-                            </div>
-                        </div>
-                    </li> -->
                 </ul>
             </div>
         </section>
@@ -232,12 +235,6 @@
                             <p>AWS</p>
                         </div>
                     </li>
-                    <!-- <li data-aos="zoom-in">
-                        <div>
-                            <i class="fab fa-unity"></i>
-                            <p>C#</p>
-                        </div>
-                    </li> -->
                 </ul>
             </div>
         </section>
