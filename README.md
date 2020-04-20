@@ -14,7 +14,7 @@ This is my coding portfolio.
 
 ## Live Version
 
-[https://www.thiagocodes.com]
+<https://www.thiagocodes.com>
 
 ## License
 
