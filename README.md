@@ -1,12 +1,20 @@
 # Coding Portfolio
 
+![Portfolio Screenshot](/readme-image.jpg)
+
 ## About
 
-This is my coding portfolio. Made in HTML5 and SASS, used Typed.JS and FontAwesome. The live version is hosted in Netlify.
+This is my coding portfolio.
+-   Made in HTML5 and SASS.
+-   Used Typed.JS and FontAwesome.
+-   Followed accessibility standards and recommendations.
+-   Responsive layout.
+-   Semantic HTML tags used.
+-   Hosted in Netlify.
 
 ## Live Version
 
-[](https://www.thiagocodes.com)
+[https://www.thiagocodes.com]
 
 ## License
 
