@@ -1,4 +1,4 @@
-let version = '1.1.2';
+let version = '1.1.3';
 
 window.onload = function() {
     let versionEl = document.getElementById('version');
