@@ -1,278 +1,448 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Description" content="Thiago Nemecek's Web Development Portfolio.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content="Thiago Nemecek's Web Development Portfolio."
+    />
     <title>Thiago's Coding Portfolio</title>
-    <link href="styles/fontawesome/all.min.css" rel="stylesheet">
-    <link href="styles/fontawesome/brands.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/styles.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="styles/fontawesome/all.min.css" rel="stylesheet" />
+    <link href="styles/fontawesome/brands.min.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src="index.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <a href="#about" class="m-skip-link">Skip to main content.</a>
     <header>
-        <nav class="social-links">
-            <ul>
-                <li>
-                    <a href="https://twitter.com/nemecek_" target="_blank" rel="noopener">
-                        <i class="fab fa-twitter"></i>
-                        <span class="visually-hidden">Go to my Twitter</span>
-                    </a>
-                    <span class="social-description">
-                        Follow me on Twitter!
-                    </span>
-                </li>
-                <li>
-                    <a href="https://github.com/tgnemecek" target="_blank" rel="noopener">
-                        <i class="fab fa-github"></i>
-                        <span class="visually-hidden">Go to my GitHub Page</span>
-                    </a>
-                    <span class="social-description">
-                        Check out my repositories!
-                    </span>
-                </li>
-                <li>
-                    <a href="https://medium.com/@tgnemecek" target="_blank" rel="noopener">
-                        <i class="fab fa-medium"></i>
-                        <span class="visually-hidden">Go to my Medium Page</span>
-                    </a>
-                    <span class="social-description">
-                        Check out my coding blog!
-                    </span>
-                </li>
-            </ul>
-        </nav>
-        <nav class="site-navigation">
-            <i class="fas fa-bars menu-bars"></i>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <h1>&lt; Thiago Nemecek /&gt;</h1>
-        <p class="subtitle">
-            <span id="subtitle-typed"></span>
-            Developer
-        </p>
+      <nav class="social-links">
+        <ul>
+          <li>
+            <a
+              href="https://twitter.com/nemecek_"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-twitter"></i>
+              <span class="visually-hidden">Go to my Twitter</span>
+            </a>
+            <span class="social-description">
+              Follow me on Twitter!
+            </span>
+          </li>
+          <li>
+            <a
+              href="https://github.com/tgnemecek"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-github"></i>
+              <span class="visually-hidden">Go to my GitHub Page</span>
+            </a>
+            <span class="social-description">
+              Check out my repositories!
+            </span>
+          </li>
+          <li>
+            <a
+              href="https://medium.com/@tgnemecek"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-medium"></i>
+              <span class="visually-hidden">Go to my Medium Page</span>
+            </a>
+            <span class="social-description">
+              Check out my coding blog!
+            </span>
+          </li>
+        </ul>
+      </nav>
+      <nav class="site-navigation">
+        <i class="fas fa-bars menu-bars"></i>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <h1>&lt; Thiago Nemecek /&gt;</h1>
+      <p class="subtitle">
+        <span id="subtitle-typed"></span>
+        Developer
+      </p>
     </header>
     <main>
-        <section id="about" class="about">
-            <div>
-                <div class="text-container" data-aos="fade-right">
-                    <h2>About</h2>
-                    <p>
-                        Hello there! I'm a Brazilian Web Developer living in Toronto who is passionate about learning new things. I've worked in Films and Games as Composer / Sound Designer, and later as Marketing Specialist — that was when I transitioned into Web Development and found my thing.
-                    </p>
-                    <p>
-                        I've worked as Front-End and Full-Stack Developer for a couple of professional and personal projects, and I'm always learning new stuff (currently studying Machine Learning!), and I frequently apply the knowledge I gather from other areas in my coding projects.
-                    </p>
-                    <p>
-                        In my free time I love playing Video Games and having a great discussion about them with friends (I'm not sure if they like it that much though). During work, I absolutely love having a problem to solve. The realization of overcoming something you previously thought was impossible is the single best feeling in coding for me, and I always try to maintain myself in that zone where I'm constantly challenging myself to improve.
-                    </p>
+      <section id="about" class="about">
+        <div>
+          <div class="text-container" data-aos="fade-right">
+            <h2>About</h2>
+            <p>
+              Hello there! I'm a Brazilian Web Developer living in Toronto who
+              is passionate about learning new things. I've worked in Films and
+              Games as Composer / Sound Designer, and later as Marketing
+              Specialist — that was when I transitioned into Web Development and
+              found my thing.
+            </p>
+            <p>
+              I've worked as Front-End and Full-Stack Developer for a couple of
+              professional and personal projects, and I'm always learning new
+              stuff (currently studying Machine Learning!), and I frequently
+              apply the knowledge I gather from other areas in my coding
+              projects.
+            </p>
+            <p>
+              In my free time I love playing Video Games and having a great
+              discussion about them with friends (I'm not sure if they like it
+              that much though). During work, I absolutely love having a problem
+              to solve. The realization of overcoming something you previously
+              thought was impossible is the single best feeling in coding for
+              me, and I always try to maintain myself in that zone where I'm
+              constantly challenging myself to improve.
+            </p>
+          </div>
+          <div class="img-container">
+            <picture>
+              <source type="image/webp" srcset="assets/about-pic.webp" />
+              <img
+                src="assets/about-pic.png"
+                alt="Close up photo of a man facing forward"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+      <section id="projects" class="projects">
+        <div>
+          <h2>My Projects</h2>
+          <ul>
+            <li data-aos="fade-up">
+              <div class="project">
+                <div class="project-header">
+                  <h3>Locamex System</h3>
+                  <p class="category">Full-Stack Web Application</p>
                 </div>
-                <div class="img-container">
-                    <picture>
-                        <source type="image/webp" srcset="assets/about-pic.webp">
-                        <img src="assets/about-pic.png" alt="Close up photo of a man facing forward">
-                    </picture>
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="assets/projects/locamex-system.webp"
+                  />
+                  <img
+                    src="assets/projects/locamex-system.jpg"
+                    alt="Screenshot of a web-app showing a calendar filled with tasks."
+                  />
+                </picture>
+                <p>
+                  Business web-app developed for a Brazilian container rental
+                  company. The app is a complete workflow solution for rentals,
+                  including contracts, proposals, stock management, product
+                  visualizer and user authentication.
+                </p>
+                <p>
+                  Full-Stack solution made in Meteor using MongoDB with
+                  server-side authentication and data validation prior to
+                  database manipulation. File uploads are handled using Amazon
+                  S3.
+                </p>
+                <p class="tags">
+                  #React #Meteor #MongoDB #noSQL #AWS #S3 #Heroku
+                </p>
+                <div class="links">
+                  <a
+                    href="https://github.com/tgnemecek/locamex"
+                    target="_blank"
+                    rel="noopener"
+                    class="as-button"
+                    >Code</a
+                  >
+                  <a href="" class="as-button disabled">
+                    Live
+                    <span class="coming-soon">Coming Soon!</span>
+                  </a>
                 </div>
+              </div>
+            </li>
+            <li data-aos="fade-up">
+              <div class="project">
+                <div class="project-header">
+                  <h3>Everyday a New Infection</h3>
+                  <p class="category">Game</p>
+                </div>
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="assets/projects/everyday-a-new-infection.webp"
+                  />
+                  <img
+                    src="assets/projects/everyday-a-new-infection.jpg"
+                    alt="Screenshot of a web-game main menu showing post-its glued on top of x-rays of a human thorax."
+                  />
+                </picture>
+                <p>
+                  Build your immune system to fight infections! A Tower Defense
+                  game built using jQuery for all visual logic, JavaScript Class
+                  Inheritance for Game Actors and the Web Audio API for full
+                  audio control.
+                </p>
+                <p class="tags">#HTML5 #jQuery #WebAudioAPI</p>
+                <div class="links">
+                  <a
+                    href="https://github.com/tgnemecek/everyday-a-new-infection"
+                    target="_blank"
+                    rel="noopener"
+                    class="as-button"
+                    >Code</a
+                  >
+                  <a
+                    href="https://tgnemecek.github.io/everyday-a-new-infection/"
+                    target="_blank"
+                    rel="noopener"
+                    class="as-button"
+                    >Live</a
+                  >
+                </div>
+              </div>
+            </li>
+            <li data-aos="fade-up">
+              <div class="project">
+                <div class="project-header">
+                  <h3>Locamex Website</h3>
+                  <p class="category">Website</p>
+                </div>
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="assets/projects/locamex-website.webp"
+                  />
+                  <img
+                    src="assets/projects/locamex-website.jpg"
+                    alt="Screenshot of the home page of a website, displaying a logo of a yellow and gray shipping container with the word Locamex stamped on its side."
+                  />
+                </picture>
+                <p>
+                  Website developed for Locamex. Used many techniques for
+                  maximum performance, including: deferring JavaScript code,
+                  deferring CSS loading (with preload of critical css), picture
+                  tag with webp formats and srcsets and lazyloading of content.
+                </p>
+                <p>
+                  Custom form submission with Amazon Simple Email Service with
+                  file uploads to Amazon S3, all processed using Amazon Lambda
+                  functions. Hosted on Netlify.
+                </p>
+                <p class="tags">
+                  #HTML5 #Lighthouse #AWS #AmazonLambda #AmazonSES #AmazonS3
+                  #Netlify
+                </p>
+                <div class="links">
+                  <a
+                    href="https://github.com/tgnemecek/locamex-website"
+                    target="_blank"
+                    rel="noopener"
+                    class="as-button"
+                  >
+                    Code
+                  </a>
+                  <a
+                    href="http://www.locamex.com.br"
+                    target="_blank"
+                    rel="noopener"
+                    class="as-button"
+                    >Live</a
+                  >
+                </div>
+              </div>
+            </li>
+            <li data-aos="fade-up">
+              <div class="project">
+                <div class="project-header">
+                  <h3>Creative</h3>
+                  <p class="category">Simple Page</p>
+                </div>
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="assets/projects/creative.webp"
+                  />
+                  <img
+                    src="assets/projects/creative.jpg"
+                    alt="Clean office with white desk with plants on top. Round chair in the foreground, facing the desk."
+                  />
+                </picture>
+                <p>
+                  Simple page developed using plain HTML and SASS. Extensive use
+                  of semantic HTML elements and accessibility best practices.
+                </p>
+                <p>
+                  Project made for the Web Development Bootcamp at Juno College.
+                </p>
+                <p class="tags">#HTML5 #SASS #CSS #Accessibility</p>
+                <div class="links">
+                  <a
+                    href="https://github.com/tgnemecek/creative"
+                    target="_blank"
+                    rel="noopener"
+                    class="as-button"
+                    >Code</a
+                  >
+                  <a
+                    href="https://tgnemecek.github.io/creative"
+                    target="_blank"
+                    rel="noopener"
+                    class="as-button"
+                    >Live</a
+                  >
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="skills" class="skills">
+        <div>
+          <h2>My Toolbox</h2>
+          <ul>
+            <li data-aos="zoom-in">
+              <div>
+                <i class="fab fa-html5"></i>
+                <p>HTML5</p>
+              </div>
+            </li>
+            <li data-aos="zoom-in">
+              <div>
+                <i class="fab fa-sass"></i>
+                <p>SASS</p>
+              </div>
+            </li>
+            <li data-aos="zoom-in">
+              <div>
+                <i class="fab fa-react"></i>
+                <p>React</p>
+              </div>
+            </li>
+            <li data-aos="zoom-in">
+              <div>
+                <i class="fab fa-js"></i>
+                <p>JavaScript</p>
+              </div>
+            </li>
+            <li data-aos="zoom-in">
+              <div>
+                <i class="fab fa-git"></i>
+                <p>Git</p>
+              </div>
+            </li>
+            <li data-aos="zoom-in">
+              <div>
+                <i class="fab fa-node"></i>
+                <p>Node</p>
+              </div>
+            </li>
+            <li data-aos="zoom-in">
+              <div>
+                <i class="fab fa-aws"></i>
+                <p>S3</p>
+              </div>
+            </li>
+            <li data-aos="zoom-in">
+              <div>
+                <i class="fab fa-aws"></i>
+                <p>Lambda</p>
+              </div>
+            </li>
+            <li data-aos="zoom-in">
+              <div>
+                <i class="fab fa-aws"></i>
+                <p>SES</p>
+              </div>
+            </li>
+            <li data-aos="zoom-in">
+              <div>
+                <i class="fas fa-columns"></i>
+                <p>Material-UI,</p>
+                <p>Bootstrap</p>
+              </div>
+            </li>
+            <li data-aos="zoom-in">
+              <div>
+                <i class="fas fa-project-diagram"></i>
+                <p>ExpressJS,</p>
+                <p>NextJS</p>
+              </div>
+            </li>
+            <li data-aos="zoom-in">
+              <div>
+                <i class="fas fa-network-wired"></i>
+                <p>GraphQL</p>
+              </div>
+            </li>
+            <li data-aos="zoom-in">
+              <div>
+                <i class="fas fa-database"></i>
+                <p>Postgres</p>
+              </div>
+            </li>
+            <li data-aos="zoom-in">
+              <div>
+                <i class="fas fa-server"></i>
+                <p>MongoDB</p>
+              </div>
+            </li>
+            <li data-aos="zoom-in">
+              <div>
+                <i class="fas fa-meteor"></i>
+                <p>Meteor</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="contact" class="contact">
+        <div>
+          <h2>Leave me a Message</h2>
+          <form name="contact" method="POST" data-netlify="true">
+            <label for="subject" class="visually-hidden">Your Name:</label>
+            <input
+              id="subject"
+              name="subject"
+              class="subject"
+              type="text"
+              placeholder="Your Name"
+            />
+            <label for="email" class="visually-hidden">Your Email:</label>
+            <input
+              id="email"
+              name="email"
+              class="email"
+              type="email"
+              placeholder="Your Email"
+            />
+            <label for="message" class="visually-hidden">Your Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              class="message"
+              placeholder="Your Message"
+            ></textarea>
+            <div class="submit">
+              <button type="submit">Submit</button>
             </div>
-        </section>
-        <section id="projects" class="projects">
-            <div>
-                <h2>My Projects</h2>
-                <ul>
-                    <li data-aos="fade-up">
-                        <div class="project">
-                            <div class="project-header">
-                                <h3>Locamex System</h3>
-                                <p class="category">Full-Stack Web Application</p>
-                            </div>
-                            <picture>
-                                <source type="image/webp" srcset="assets/projects/locamex-system.webp">
-                                <img src="assets/projects/locamex-system.jpg" alt="Screenshot of a web-app showing a calendar filled with tasks.">
-                            </picture>
-                            <p>
-                                Business web-app developed for a Brazilian container rental company. The app is a complete workflow solution for rentals, including contracts, proposals, stock management, product visualizer and user authentication.
-                            </p>
-                            <p>
-                                Full-Stack solution made in Meteor using MongoDB with server-side authentication and data validation prior to database manipulation.
-                                File uploads are handled using Amazon S3.
-                            </p>
-                            <p class="tags">#React #Meteor #MongoDB #noSQL #AWS #S3 #Heroku</p>
-                            <div class="links">
-                                <a href="https://github.com/tgnemecek/locamex" target="_blank" rel="noopener" class="as-button">Code</a>
-                                <a href="" class="as-button disabled">
-                                    Live
-                                    <span class="coming-soon">Coming Soon!</span>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li data-aos="fade-up">
-                        <div class="project">
-                            <div class="project-header">
-                                <h3>Everyday a New Infection</h3>
-                                <p class="category">Game</p>
-                            </div>
-                            <picture>
-                                <source type="image/webp" srcset="assets/projects/everyday-a-new-infection.webp">
-                                <img src="assets/projects/everyday-a-new-infection.jpg" alt="Screenshot of a web-game main menu showing post-its glued on top of x-rays of a human thorax.">
-                            </picture>
-                            <p>Build your immune system to fight infections! A Tower Defense game built using jQuery for all visual logic, JavaScript Class Inheritance for Game Actors and the Web Audio API for full audio control.</p>
-                            <p class="tags">#HTML5 #jQuery #WebAudioAPI</p>
-                            <div class="links">
-                                <a href="https://github.com/tgnemecek/everyday-a-new-infection" target="_blank" rel="noopener" class="as-button">Code</a>
-                                <a href="https://tgnemecek.github.io/everyday-a-new-infection/" target="_blank" rel="noopener" class="as-button">Live</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li data-aos="fade-up">
-                        <div class="project">
-                            <div class="project-header">
-                                <h3>Locamex Website</h3>
-                                <p class="category">Website</p>
-                            </div>
-                            <picture>
-                                <source type="image/webp" srcset="assets/projects/locamex-website.webp">
-                                <img src="assets/projects/locamex-website.jpg" alt="Screenshot of the home page of a website, displaying a logo of a yellow and gray shipping container with the word Locamex stamped on its side.">
-                            </picture>
-                            <p>
-                                Website developed for Locamex. Used many techniques for maximum performance, including: deferring JavaScript code, deferring CSS loading (with preload of critical css), picture tag with webp formats and srcsets and lazyloading of content.
-                            </p>
-                            <p>
-                                Custom form submission with Amazon Simple Email Service with file uploads to Amazon S3, all processed using Amazon Lambda functions. Hosted on Netlify.
-                            </p>
-                            <p class="tags">#HTML5 #Lighthouse #AWS #AmazonLambda #AmazonSES #AmazonS3 #Netlify</p>
-                            <div class="links">
-                                <a href="https://github.com/tgnemecek/locamex-website" target="_blank" rel="noopener" class="as-button">
-                                    Code
-                                </a>
-                                <a href="http://www.locamex.com.br" target="_blank" rel="noopener" class="as-button">Live</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li data-aos="fade-up">
-                        <div class="project">
-                            <div class="project-header">
-                                <h3>Creative</h3>
-                                <p class="category">Simple Page</p>
-                            </div>
-                            <picture>
-                                <source type="image/webp" srcset="assets/projects/creative.webp">
-                                <img src="assets/projects/creative.jpg" alt="Clean office with white desk with plants on top. Round chair in the foreground, facing the desk.">
-                            </picture>
-                            <p>
-                                Simple page developed using plain HTML and SASS. Extensive use of semantic HTML elements and accessibility best practices.
-                            </p>
-                            <p>
-                                Project made for the Web Development Bootcamp at Juno College.
-                            </p>
-                            <p class="tags">#HTML5 #SASS #CSS #Accessibility</p>
-                            <div class="links">
-                                <a href="https://github.com/tgnemecek/creative" target="_blank" rel="noopener" class="as-button">Code</a>
-                                <a href="https://tgnemecek.github.io/creative" target="_blank" rel="noopener" class="as-button">Live</a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section id="skills" class="skills">
-            <div>
-                <h2>My Toolbox</h2>
-                <ul>
-                    <li data-aos="zoom-in">
-                        <div>
-                            <i class="fab fa-html5"></i>
-                            <p>HTML5</p>
-                        </div>
-                    </li>
-                    <li data-aos="zoom-in">
-                        <div>
-                            <i class="fab fa-sass"></i>
-                            <p>SASS</p>
-                        </div>
-                    </li>
-                    <li data-aos="zoom-in">
-                        <div>
-                            <i class="fab fa-react"></i>
-                            <p>React</p>
-                        </div>
-                    </li>
-                    <li data-aos="zoom-in">
-                        <div>
-                            <i class="fab fa-js"></i>
-                            <p>Advanced<br>JavaScript</p>
-                        </div>
-                    </li>
-                    <li data-aos="zoom-in">
-                        <div>
-                            <i class="fab fa-git"></i>
-                            <p>Git</p>
-                        </div>
-                    </li>
-                    <li data-aos="zoom-in">
-                        <div>
-                            <i class="fab fa-node"></i>
-                            <p>Node</p>
-                        </div>
-                    </li>
-                    <li data-aos="zoom-in">
-                        <div>
-                            <i class="fas fa-database"></i>
-                            <p>SQL</p>
-                        </div>
-                    </li>
-                    <li data-aos="zoom-in">
-                        <div>
-                            <i class="fas fa-server"></i>
-                            <p>MongoDB</p>
-                        </div>
-                    </li>
-                    <li data-aos="zoom-in">
-                        <div>
-                            <i class="fas fa-meteor"></i>
-                            <p>Meteor</p>
-                        </div>
-                    </li>
-                    <li data-aos="zoom-in">
-                        <div>
-                            <i class="fab fa-aws"></i>
-                            <p>AWS</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section id="contact" class="contact">
-            <div>
-                <h2>Leave me a Message</h2>
-                <form name="contact" method="POST" data-netlify="true">
-                    <label for="subject" class="visually-hidden">Your Name:</label>
-                    <input id="subject" name="subject" class="subject" type="text" placeholder="Your Name">
-                    <label for="email" class="visually-hidden">Your Email:</label>
-                    <input id="email" name="email" class="email" type="email" placeholder="Your Email">
-                    <label for="message" class="visually-hidden">Your Message:</label>
-                    <textarea id="message" name="message" class="message" placeholder="Your Message"></textarea>
-                    <div class="submit">
-                        <button type="submit">Submit</button>
-                    </div>
-                </form>
-            </div>
-        </section>
+          </form>
+        </div>
+      </section>
     </main>
     <footer>
-        <p>Copyright © Thiago Nemecek 2020</p>
-        <p id="version" class="version"></p>
+      <p>Copyright © Thiago Nemecek 2020</p>
+      <p id="version" class="version"></p>
     </footer>
-</body>
+  </body>
 </html>
